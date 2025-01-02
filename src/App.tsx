@@ -16,6 +16,17 @@ import MexicoDetails from './pages/Mexico'
 import BrasilDetails from './pages/Brasil'
 import ItaliaDetails from './pages/Italia'
 import JaponDetails from './pages/Japon'
+import { useEffect } from 'react'
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation()
@@ -36,6 +47,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

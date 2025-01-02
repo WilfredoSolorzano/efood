@@ -31,7 +31,7 @@ const Carousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false // Desactiva las flechas de `react-slick`
+    arrows: false
   }
 
   return (

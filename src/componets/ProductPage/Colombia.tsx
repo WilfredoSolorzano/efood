@@ -92,7 +92,7 @@ const Colombia = () => {
                   image={prato.image}
                   infos={prato.infos}
                   nota={prato.nota}
-                  isProductPage={false}
+                  isProductPage={true}
                 />
                 <AddToCartButton>Adicionar ao carrinho</AddToCartButton>
               </ProductSection>

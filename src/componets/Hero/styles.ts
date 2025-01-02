@@ -12,6 +12,13 @@ export const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  @media (max-width: 768px) {
+    height: 300px; /* Reduce la altura en tablets */
+  }
+
+  @media (max-width: 480px) {
+    height: 250px; /* Reduce aún más la altura en móviles */
+  }
 `
 
 export const Logo = styled.img`
@@ -19,6 +26,16 @@ export const Logo = styled.img`
   margin-top: 40px;
   top: 40px;
   left: 621px;
+
+  @media (max-width: 768px) {
+    width: 100px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80px;
+    margin-top: 20px;
+  }
 `
 
 export const Text = styled.h1`
@@ -35,4 +52,18 @@ export const Text = styled.h1`
   text-decoration: none;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    font-size: 28px; /* Reduce el tamaño del texto en tablets */
+    line-height: 36px;
+    top: 140px;
+  }
+
+  @media (max-width: 480px) {
+    width: 90%;
+    font-size: 20px; /* Reduce el tamaño del texto en móviles */
+    line-height: 28px;
+    top: 120px;
+  }
 `

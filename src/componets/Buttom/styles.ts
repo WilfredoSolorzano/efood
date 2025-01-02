@@ -10,6 +10,19 @@ export const ButtonContainer = styled.button`
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 8px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
 `
 
 export const ButtonLink = styled(Link)`
@@ -24,4 +37,17 @@ export const ButtonLink = styled(Link)`
   border-radius: 8px;
   position: absolute;
   bottom: 0px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
 `

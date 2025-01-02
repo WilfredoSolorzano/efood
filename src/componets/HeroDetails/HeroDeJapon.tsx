@@ -7,14 +7,13 @@ const HeroDeJapon = () => (
   <Imagem
     style={{
       backgroundImage: `url(${bannerImg})`,
-      width: 'auto',
-      height: '525px'
+      width: 'auto'
     }}
   >
     <div className="container">
       <Tag size="big">Japon</Tag>
       <div>
-        <Titulo id="titulo">
+        <Titulo id="TituloBrackg">
           Do Japão para a sua mesa: frescor, tradição e sabor em cada prato.
         </Titulo>
       </div>

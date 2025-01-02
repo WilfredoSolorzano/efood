@@ -21,6 +21,13 @@ export const Nav = styled.nav`
     font-size: 14px;
     font-weight: bold;
   }
+
+  @media (max-width: 768px) {
+    padding: 12px;
+    h2 {
+      font-size: 15px;
+    }
+  }
 `
 
 export const ProductSection = styled.div`
@@ -31,6 +38,10 @@ export const ProductSection = styled.div`
 
   .right-content {
     display: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px;
   }
 `
 
@@ -48,6 +59,11 @@ export const AddToCartButton = styled.button`
   &:hover {
     background-color: ${cores.colorBody};
   }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 `
 export const ProductGrid = styled.div`
   display: grid;
@@ -56,6 +72,11 @@ export const ProductGrid = styled.div`
   gap: 45px;
   width: 100%;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 `
 export const Container = styled.div`
   max-width: 1024px;
@@ -63,4 +84,8 @@ export const Container = styled.div`
   margin: auto;
   background-color: ${cores.branca};
   padding: 20px;
+
+  @media (max-width: 768px) {
+    padding: 12px;
+  }
 `

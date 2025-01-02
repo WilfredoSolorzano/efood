@@ -19,7 +19,7 @@ const ProductsList = ({ title, pratos }: Props) => (
           infos={pratos.infos}
           nota={pratos.nota}
           title={pratos.title}
-          isProductPage={false}
+          isProductPage={true}
         />
       ))}
     </List>

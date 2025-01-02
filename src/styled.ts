@@ -26,6 +26,12 @@ export const GlobalCss = createGlobalStyle`
     color: ${cores.fuccia};
     margin: 25px 0;
     }
+    @media (max-width: 768px) {
+    padding: 12px;
+    h2 {
+      font-size: 20px;
+    }
+  }
   }
     .container{
     max-width: 2031.81px;

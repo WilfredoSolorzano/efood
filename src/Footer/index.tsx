@@ -9,11 +9,17 @@ import {
   Links,
   Logo,
   LogoContainer,
-  SocialLink
+  SocialLink,
+  ScrollToTopButton
 } from './styled'
+import Button from '../componets/Buttom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
     <Container>
@@ -48,10 +54,19 @@ const Footer = () => {
           <p>
             A efood é uma plataforma para divulgação de estabelecimentos, a
             responsabilidade pela entrega, qualidade dos produtos é toda do
-            estabelecimento contratado.{' '}
+            estabelecimento contratado.
           </p>
           <p>{currentYear} - © E-FOOD Todos os direitos reservados</p>
         </FooterText>
+        <ScrollToTopButton>
+          <Button
+            type="button"
+            title="Voltar ao topo"
+            onClick={handleScrollToTop}
+          >
+            ↑
+          </Button>
+        </ScrollToTopButton>
       </div>
     </Container>
   )

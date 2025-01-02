@@ -7,8 +7,7 @@ const HeroDeColombia = () => (
   <Imagem
     style={{
       backgroundImage: `url(${bannerImg})`,
-      width: 'auto',
-      height: '525px'
+      width: 'auto'
     }}
   >
     <div className="container">
