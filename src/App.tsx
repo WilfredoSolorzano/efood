@@ -17,6 +17,7 @@ import BrasilDetails from './pages/Brasil'
 import ItaliaDetails from './pages/Italia'
 import JaponDetails from './pages/Japon'
 import { useEffect } from 'react'
+import Rotas from './Rotas'
 
 const ScrollToTop = () => {
   const { pathname } = useLocation()
@@ -49,18 +50,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product-details/peru" element={<PeruDetails />} />
-          <Route
-            path="/product-details/colombia"
-            element={<ColombiaDetails />}
-          />
-          <Route path="/product-details/mexico" element={<MexicoDetails />} />
-          <Route path="/product-details/brasil" element={<BrasilDetails />} />
-          <Route path="/product-details/italia" element={<ItaliaDetails />} />
-          <Route path="/product-details/japon" element={<JaponDetails />} />
-        </Routes>
+        <Rotas />
       </Layout>
     </Router>
   )
