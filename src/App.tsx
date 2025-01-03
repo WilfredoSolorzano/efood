@@ -1,21 +1,9 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation
-} from 'react-router-dom'
+import { BrowserRouter as Router, useLocation } from 'react-router-dom'
 import Hero from './componets/Hero'
 import { GlobalCss } from './styled'
-import Home from './pages/Home'
 import Carousel from './componets/Carrousel'
 import Footer from './Footer'
 import Banner from './componets/Banner'
-import PeruDetails from './pages/Peru'
-import ColombiaDetails from './pages/Colombia'
-import MexicoDetails from './pages/Mexico'
-import BrasilDetails from './pages/Brasil'
-import ItaliaDetails from './pages/Italia'
-import JaponDetails from './pages/Japon'
 import { useEffect } from 'react'
 import Rotas from './Rotas'
 
