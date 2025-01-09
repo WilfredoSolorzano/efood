@@ -11,6 +11,7 @@ type Props = {
   infos: string[]
   image: string
   detailsRoute?: string
+  customClass?: string
 }
 
 const Product = ({
@@ -20,9 +21,10 @@ const Product = ({
   infos,
   image,
   isProductPage,
-  detailsRoute
+  detailsRoute,
+  customClass
 }: Props) => (
-  <Card isProductPage={isProductPage}>
+  <Card id={customClass} isProductPage={isProductPage}>
     <img src={image} alt={title} />
     <Infos>
       {infos.map((info) => (

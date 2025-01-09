@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, useLocation } from 'react-router-dom'
 import Hero from './componets/Hero'
 import { GlobalCss } from './styled'
-import Carousel from './componets/Carrousel'
 import Footer from './Footer'
 import Banner from './componets/Banner'
 import { useEffect } from 'react'
@@ -26,7 +25,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <GlobalCss />
       {isProductDetailsPage && <Banner />}
       {!isProductDetailsPage && <Hero />}
-      {!isProductDetailsPage && <Carousel />}
       {children}
       <Footer />
     </>

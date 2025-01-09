@@ -1,15 +1,26 @@
 import styled from 'styled-components'
-import { TagContainer } from '../Tag/styles'
 import { cores } from '../../styled'
 
 export const Imagem = styled.div`
-  max-width: 2025px;
+  max-width: 1366px;
   width: 100%;
-  height: 525px;
+  height: 280px;
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
   font-weight: bold;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
 
   @media (max-width: 768px) {
     height: 278px;
@@ -36,51 +47,50 @@ export const Imagem = styled.div`
       padding-top: 130px;
     }
   }
-  .tagBotao {
-    position: absolute;
-    bottom: -52px;
-    z-index: 1;
+`
+export const TextoSuperior = styled.div`
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 32px;
+  line-height: 37.5px;
+  color: ${cores.branca};
+  text-shadow: 2px 2px 4px ${cores.preta};
+  position: absolute;
+  top: 40px;
+  left: 74px;
+  z-index: 1;
+  opacity: 0.7;
 
-    @media (max-width: 768px) {
-      position: static; /* Centra el botón en pantallas pequeñas */
-      margin-top: 20px;
-    }
+  @media (max-width: 768px) {
+    font-size: 28px;
+    top: 15px;
+    left: 15px;
   }
-  #titulo {
-    color: ${cores.branca};
-  }
-  #TituloBrackg {
-    background-color: ${cores.fuccia};
-    color: ${cores.branca};
-  }
 
-  ${TagContainer} {
-    position: absolute;
-    top: 32px;
-    right: 35px;
-    z-index: 2;
-
-    @media (max-width: 768px) {
-      top: 20px;
-      right: 20px;
-    }
-
-    @media (max-width: 480px) {
-      top: 15px;
-      right: 15px;
-    }
+  @media (max-width: 480px) {
+    font-size: 24px;
   }
 `
-export const Titulo = styled.h2`
-  color: ${cores.fuccia};
-  font-size: 26px;
-  max-width: 450px;
-  @media (max-width: 768px) {
-    font-size: 20px; /* Reduce el tamaño en tablets */
-    max-width: 90%;
-    text-align: center; /* Centra el texto en tablets */
 
-    @media (max-width: 480px) {
-    font-size: 18px; /* Reduce aún más el tamaño en móviles */
+export const TextoInferior = styled.div`
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 37.5px;
+  color: ${cores.branca};
+  text-shadow: 2px 2px 4px ${cores.preta};
+  position: absolute;
+  bottom: 35px;
+  left: 70px;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
   }
 `

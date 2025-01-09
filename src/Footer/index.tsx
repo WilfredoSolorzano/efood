@@ -1,25 +1,19 @@
 import React from 'react'
 import logo from '../asset/images/logos/logo.png'
-import facebookIcon from '../asset/images/footer/facebook.jpeg'
-import instagramIcon from '../asset/images/footer/instagram.avif'
-import XIcon from '../asset/images/footer/x.jpg'
+import facebookIcon from '../asset/images/footer/facebook.png'
+import instagramIcon from '../asset/images/footer/instagram.png'
+import XIcon from '../asset/images/footer/x.png'
 import {
   Container,
   FooterText,
   Links,
   Logo,
   LogoContainer,
-  SocialLink,
-  ScrollToTopButton
+  SocialLink
 } from './styled'
-import Button from '../componets/Buttom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
-
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
 
   return (
     <Container>
@@ -58,15 +52,6 @@ const Footer = () => {
           </p>
           <p>{currentYear} - © E-FOOD Todos os direitos reservados</p>
         </FooterText>
-        <ScrollToTopButton>
-          <Button
-            type="button"
-            title="Voltar ao topo"
-            onClick={handleScrollToTop}
-          >
-            ↑
-          </Button>
-        </ScrollToTopButton>
       </div>
     </Container>
   )

@@ -9,7 +9,7 @@ export const Card = styled.div<{ isProductPage?: boolean }>`
   position: relative;
   margin-bottom: 10px;
   color: ${cores.fuccia};
-  height: ${(props) => (props.isProductPage ? 'auto' : '415px')};
+  height: ${(props) => (props.isProductPage ? 'auto' : '398px')};
 
   ${TagContainer} {
     margin-right: 8px;
@@ -46,8 +46,8 @@ export const Titulo = styled.h3`
   font-weight: bold;
   font-size: 18px;
   display: block;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: 0px;
+  margin-bottom: 14px;
 
   @media (max-width: 768px) {
     font-size: 16px;

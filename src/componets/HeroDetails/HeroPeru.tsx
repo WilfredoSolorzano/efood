@@ -1,30 +1,14 @@
-import { Imagem, Titulo } from './styled'
+import { Imagem, TextoInferior, TextoSuperior } from './styled'
 import bannerImg from '../../asset/images/heroPais/peru.jpg'
-import Tag from '../Tag'
-import Button from '../Buttom'
 
 const HeroDePeru = () => (
   <Imagem
     style={{
-      backgroundImage: `url(${bannerImg})`,
-      width: 'auto'
+      backgroundImage: `url(${bannerImg})`
     }}
   >
-    <div className="container">
-      <Tag size="big">Perú</Tag>
-      <div>
-        <Titulo id="TituloBrackg">Um lugar cheio de beleza</Titulo>
-      </div>
-      <div className="tagBotao">
-        <Button
-          type="link"
-          to="/"
-          title="Clique aqui para aproveitar esta oferta"
-        >
-          Aproveita
-        </Button>
-      </div>
-    </div>
+    <TextoSuperior>Peruano</TextoSuperior>
+    <TextoInferior>Só os melhores restaurantes</TextoInferior>
   </Imagem>
 )
 

@@ -1,22 +1,15 @@
-import { Imagem, Titulo } from './styled'
+import { Imagem, TextoInferior, TextoSuperior } from './styled'
 import bannerImg from '../../asset/images/heroPais/italia.jpg'
-import Tag from '../Tag'
 
-const HeroDeBrasil = () => (
+const HeroDeItalia = () => (
   <Imagem
     style={{
-      backgroundImage: `url(${bannerImg})`,
-      width: 'auto'
+      backgroundImage: `url(${bannerImg})`
     }}
   >
-    <div className="container">
-      <Tag size="big">Italia</Tag>
-      <div>
-        <Titulo></Titulo>
-      </div>
-      <div className="tagBotao"></div>
-    </div>
+    <TextoSuperior>Italiano</TextoSuperior>
+    <TextoInferior>Só os melhores restaurantes</TextoInferior>
   </Imagem>
 )
 
-export default HeroDeBrasil
+export default HeroDeItalia

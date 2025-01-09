@@ -1,20 +1,16 @@
 import { Link } from 'react-router-dom'
 import { HeaderBar, Links, LinkItems, LinkCart, Logo } from './styled'
 import logo from '../../asset/images/logos/logo.png'
-import carrinho from '../../asset/images/logos/carrinho.png'
 
 const Header = () => (
   <HeaderBar>
     <Links>
       <LinkItems>
-        <Link to="/">Home</Link>
+        <Link to="/">Restaurantes</Link>
       </LinkItems>
     </Links>
     <Logo src={logo} alt="efood" />
-    <LinkCart href="#">
-      0-Producto(s)
-      <img src={carrinho} alt="carrinho" />
-    </LinkCart>
+    <LinkCart href="#">0-producto(s) no carrinho</LinkCart>
   </HeaderBar>
 )
 

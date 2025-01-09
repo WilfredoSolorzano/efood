@@ -20,7 +20,7 @@ export const Container = styled.section`
 export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 40px 80px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

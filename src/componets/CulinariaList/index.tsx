@@ -3,13 +3,11 @@ import Product from '../Product'
 import { Container, List } from './styles'
 
 export type Props = {
-  title: string
   culinaria: Culinarias[]
 }
 
-const CulinariaList = ({ title, culinaria }: Props) => (
+const CulinariaList = ({ culinaria }: Props) => (
   <Container>
-    <h2>{title}</h2>
     <List>
       {culinaria.map((culinaria) => (
         <>

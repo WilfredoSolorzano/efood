@@ -8,10 +8,10 @@ export const HeaderBar = styled.header`
   background-repeat: no-repeat;
   padding: 24px;
   border-radius: 16px;
-  margin-bottom: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 280px;
 
   a {
     color: ${cores.fuccia};
@@ -21,6 +21,7 @@ export const HeaderBar = styled.header`
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 16px;
+    gap: 20px;
   }
 `
 
@@ -38,18 +39,22 @@ export const Links = styled.ul`
 `
 
 export const LinkItems = styled.li`
-  margin-right: 16px;
-
+  margin-left: 100px;
   @media (max-width: 768px) {
     margin-right: 0;
     margin-bottom: 8px;
   }
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 35px;
+  }
 `
 
 export const Logo = styled.img`
+  width: 125px;
+  height: 56px;
   display: block;
-  margin: 0 auto;
-  width: 150px;
+  margin: 0;
 
   @media (max-width: 768px) {
     margin-bottom: 16px;
@@ -60,6 +65,7 @@ export const Logo = styled.img`
 export const LinkCart = styled.a`
   display: flex;
   align-items: center;
+  margin: 0;
 
   img {
     width: 26px;

@@ -1,11 +1,11 @@
 import CulinariaList from '../../componets/CulinariaList'
 import Culinarias from '../../model/Culinarias'
-import Sushi from '../../asset/images/Sushi.png'
-import Trattoria from '../../asset/images/Trattoria.png'
-import Mignon from '../../asset/images/Mignon .jpg'
-import Burrito from '../../asset/images/burritomexicano.jpeg'
-import Paisa from '../../asset/images/BandejaPaisa.jpg'
-import Ceviche from '../../asset/images/ceviche.jpg'
+import Sushi from '../../asset/images/pratos/Japon/Sushi.png'
+import Trattoria from '../../asset/images/pratos/Italia/Trattoria.png'
+import Mignon from '../../asset/images/pratos/brasil/Mignon.jpg'
+import Burrito from '../../asset/images/pratos/mexico/burritomexicano.jpeg'
+import Paisa from '../../asset/images/pratos/colombia/BandejaPaisa.jpg'
+import Ceviche from '../../asset/images/pratos/peru/ceviche.jpg'
 
 export const cardapio: Culinarias[] = [
   {
@@ -72,7 +72,7 @@ export const cardapio: Culinarias[] = [
 
 const Home = () => (
   <>
-    <CulinariaList title={'Cardapio Internacional'} culinaria={cardapio} />
+    <CulinariaList culinaria={cardapio} />
   </>
 )
 

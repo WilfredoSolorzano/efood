@@ -16,10 +16,9 @@ const ProductsList = ({ title, pratos }: Props) => (
           key={pratos.id}
           description={pratos.description}
           image={pratos.image}
-          infos={pratos.infos}
-          nota={pratos.nota}
           title={pratos.title}
           isProductPage={true}
+          infos={[]}
         />
       ))}
     </List>

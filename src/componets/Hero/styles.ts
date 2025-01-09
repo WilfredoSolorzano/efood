@@ -6,18 +6,18 @@ export const HeroContainer = styled.div`
   background-image: url(${vector});
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   height: 384px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   @media (max-width: 768px) {
-    height: 300px; /* Reduce la altura en tablets */
+    height: 300px;
   }
 
   @media (max-width: 480px) {
-    height: 250px; /* Reduce aún más la altura en móviles */
+    height: 250px;
   }
 `
 
