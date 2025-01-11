@@ -42,7 +42,7 @@ export const TextoSuperior = styled.div`
   text-shadow: 2px 2px 4px ${cores.preta};
   position: absolute;
   top: 40px;
-  left: 74px;
+  left: 171px;
   z-index: 1;
   opacity: 0.7;
 
@@ -66,7 +66,7 @@ export const TextoInferior = styled.div`
   text-shadow: 2px 2px 4px ${cores.preta};
   position: absolute;
   bottom: 35px;
-  left: 70px;
+  left: 171px;
   z-index: 1;
 
   @media (max-width: 768px) {
