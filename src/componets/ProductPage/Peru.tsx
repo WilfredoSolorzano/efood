@@ -64,7 +64,7 @@ const cardapio: Pratos[] = [
 
 const Peru = () => {
   return (
-    <div style={{ padding: '0px 30px' }}>
+    <>
       <div>
         <HeroDePeru />
       </div>
@@ -87,7 +87,7 @@ const Peru = () => {
           </ProductGrid>
         </Container>
       </Nav>
-    </div>
+    </>
   )
 }
 

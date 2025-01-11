@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { cores } from '../../styled'
 
 export const Imagem = styled.div`
-  max-width: 1366px;
   width: 100%;
   height: 280px;
   display: block;
@@ -29,20 +28,6 @@ export const Imagem = styled.div`
   @media (max-width: 480px) {
     height: 288px;
   }
-
-  .container {
-    position: relative;
-    padding-top: 340px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      padding-top: 200px;
-      align-items: center;
-    }
-
     @media (max-width: 480px) {
       padding-top: 130px;
     }

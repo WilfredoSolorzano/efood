@@ -6,8 +6,8 @@ export const HeaderBar = styled.header`
   background-image: url(${fundo});
   background-size: cover;
   background-repeat: no-repeat;
+  height: 186px;
   padding: 24px;
-  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;

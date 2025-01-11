@@ -64,7 +64,7 @@ const cardapio: Pratos[] = [
 
 const Brasil = () => {
   return (
-    <div style={{ padding: '0px 30px' }}>
+    <>
       <div>
         <HeroDeColombia />
       </div>
@@ -87,7 +87,7 @@ const Brasil = () => {
           </ProductGrid>
         </Container>
       </Nav>
-    </div>
+    </>
   )
 }
 

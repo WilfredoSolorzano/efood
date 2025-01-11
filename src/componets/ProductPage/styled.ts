@@ -18,9 +18,13 @@ export const Nav = styled.nav`
     display: none;
   }
   ${Descricao} {
+    font-family: Roboto;
     font-size: 14px;
+    font-weight: 400;
     line-height: 22px;
-    text-align: justify;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
   ${Titulo} {
     font-size: 16px;
