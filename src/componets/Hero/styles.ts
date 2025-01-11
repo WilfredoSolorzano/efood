@@ -4,14 +4,14 @@ import vector from '../../asset/images/Vector.png'
 
 export const HeroContainer = styled.div`
   background-image: url(${vector});
-  background-color: #e66767; /* Cor de fundo do design */
+  background-color: #e66767;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 384px; /* Altura do container */
+  height: 384px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Alinha no topo */
+  justify-content: flex-start;
   position: relative;
   text-align: center;
   margin-bottom: 80px;
@@ -30,13 +30,13 @@ export const Text = styled.h1`
   height: 84px;
   position: absolute;
   top: 236px;
-  font-family:
+  font-family: Roboto;
   font-size: 36px;
   font-weight: 900;
   line-height: 42.19px;
   text-align: center;
   color: ${cores.fuccia};
-  transition: opacity 0.5s ease; /* Animação para aparecer */
+  transition: opacity 0.5s ease;
 
   @media (max-width: 768px) {
     width: 80%;
