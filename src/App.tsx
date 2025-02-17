@@ -1,44 +1,17 @@
-import { BrowserRouter as Router, useLocation } from 'react-router-dom'
-import Hero from './componets/Hero'
+import { BrowserRouter } from 'react-router-dom'
 import { GlobalCss } from './styled'
-import Footer from './Footer'
-import Banner from './componets/Banner'
-import { useEffect } from 'react'
-import Rotas from './Rotas'
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation()
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
-
-  return null
-}
-
-const Layout = ({ children }: { children: React.ReactNode }) => {
-  const location = useLocation()
-  const isProductDetailsPage = location.pathname.startsWith('/product-details')
-
-  return (
-    <>
-      <GlobalCss />
-      {isProductDetailsPage && <Banner />}
-      {!isProductDetailsPage && <Hero />}
-      {children}
-      <Footer />
-    </>
-  )
-}
+import Rotas from './routes'
+import { Provider } from 'react-redux'
+import { store } from './store'
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Layout>
+    <Provider store={store}>
+      <BrowserRouter>
+        <GlobalCss />
         <Rotas />
-      </Layout>
-    </Router>
+      </BrowserRouter>
+    </Provider>
   )
 }
 

@@ -1,47 +1,125 @@
 import styled from 'styled-components'
-import { cores } from '../../styled'
+import { breakpoints, cores } from '../../styled'
 
-export const Container = styled.section`
+export const Container = styled.div`
   max-width: 1024px;
-  height: 708px;
-  margin: auto;
-  background-color: ${cores.branca};
+  margin: 80px auto;
 
-  @media (max-width: 768px) {
-    padding: 15px;
-    height: auto;
+  li {
+    list-style: none;
   }
 
-  @media (max-width: 480px) {
-    padding: 10px;
-    height: auto;
+  @media (max-width: ${breakpoints.desktop}) {
+    margin: 20px 10px;
   }
 `
 export const List = styled.ul`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 32px;
+  row-gap: 32px;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
   }
-
-  @media (max-width: 480px) {
-    gap: 20px;
+  @media (max-width: ${breakpoints.mobile}) {
+    grid-template-columns: 1fr;
+    margin: 0 10px;
+    row-gap: 10px;
   }
 `
-export const Title = styled.h2`
+
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justiry-content: center;
+  z-index: 2;
+
+  &.visible {
+    display: flex;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+`
+
+export const ModalContent = styled.div`
+  margin: 0 auto;
+  max-width: 1024px;
+  height: 344px;
+  background-color: ${cores.fuccia};
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 3;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: 15px;
+  }
+`
+export const PratosImage = styled.img`
+  object-fit: cover;
+  max-width: 280px;
+  max-height: 280px;
+  margin: 32px 24px 32px 32px;
+  object-fit: cover;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
+  }
+`
+export const ModalContainer = styled.div`
+  max-width: 656px;
+  width: 100%;
+  margin-top: 32px;
+`
+
+export const PratosTitle = styled.h3`
   font-size: 18px;
-  font-weight: bold;
-
-  @media (max-width: 768px) {
-    font-size: 16px;
-    margin-bottom: 15px;
+  font-weight: 900;
+  color: ${cores.branca};
+  line-height: 21.09px;
+  display: block;
+`
+export const PratosDescription = styled.p`
+  font-size: 14px;
+  font-weight: 400;
+  color: ${cores.branca};
+  line-height: 22px;
+  width: 100%;
+  margin: 16px 0 16px 0;
+  p {
+    margin-top: 90px;
   }
-
-  @media (max-width: 480px) {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
+`
+export const CloseIcon = styled.img`
+  max-width: 16px;
+  max-height: 16px;
+  width: 100%;
+  margin: 8px;
+  cursor: pointer;
+`
+export const Button = styled.button`
+  background-color: ${cores.textBotoes};
+  color: ${cores.fuccia};
+  border: none;
+  padding: 4px 7px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
 `

@@ -5,8 +5,16 @@ export const cores = {
   preta: '#111',
   fuccia: '#E66767',
   textBotoes: '#FFEBD9',
+  dourado: '#FFB930',
   colorBody: 'rgb(230, 103, 103)',
-  colorFundo: 'bisque'
+  colorFundo: 'bisque',
+  Claro: '#FFF8F2'
+}
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '821px',
+  mobile: '430px',
+  iphone11: '414px'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -18,7 +26,7 @@ export const GlobalCss = createGlobalStyle`
 
     body {
     font-family: 'Roboto',sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     background-color: ${cores.branca};
     color: ${cores.preta};
 
