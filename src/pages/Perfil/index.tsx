@@ -5,6 +5,7 @@ import Apresentacao from '../../componets/HeroInicio'
 import FoodList from '../../componets/PratosList'
 import Footer from '../../Footer'
 import Loader from '../../componets/Loader'
+import Cart from '../../componets/Cart'
 
 type RestaurantParams = {
   id: string
@@ -21,6 +22,7 @@ const Perfil = () => {
         <Apresentacao restaurant={restaurantFood} />
         <FoodList restaurant={restaurantFood} />
         <Footer />
+        <Cart />
       </>
     )
   }

@@ -10,9 +10,18 @@ import {
   CloseIcon
 } from './styles'
 import close from '../../asset/images/logos/close.jpg'
+import { useDispatch } from 'react-redux'
+import { addItem, open } from '../../store/reducers/cart'
 
 export type Props = {
   restaurant: Restaurant
+}
+
+export type Pedido = {
+  id: number
+  nome: string
+  foto: string
+  preco: number
 }
 
 export const priceFormat = (price: number) => {
@@ -30,6 +39,21 @@ const PratosList = ({ restaurant }: Props) => {
   const [foodPhotoAlt, setfoodPhotoAlt] = useState('')
   const [foodServe, setfoodServe] = useState('')
   const [foodPrice, setfoodPrice] = useState(0)
+  const [foodId, setFoodId] = useState(0)
+
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    const pedido: Pedido = {
+      id: foodId,
+      nome: foodTitle,
+      foto: foodPhoto,
+      preco: foodPrice
+    }
+    dispatch(addItem(pedido))
+    setShowModal(false)
+    dispatch(open())
+  }
 
   return (
     <>
@@ -46,6 +70,7 @@ const PratosList = ({ restaurant }: Props) => {
                 setfoodPrice(food.preco)
                 setfoodPhotoAlt(food.nome)
                 setfoodPhoto(food.foto)
+                setFoodId(food.id)
               }}
             >
               <Pratos
@@ -68,7 +93,9 @@ const PratosList = ({ restaurant }: Props) => {
               {foodDescription}
               <p>Serve: {foodServe}</p>
             </PratosDescription>
-            <Button>Adicionar ao carrinho - {priceFormat(foodPrice)}</Button>
+            <Button onClick={addToCart}>
+              Adicionar ao carrinho - {priceFormat(foodPrice)}
+            </Button>
           </ModalContainer>
           <CloseIcon
             onClick={() => setShowModal(false)}
