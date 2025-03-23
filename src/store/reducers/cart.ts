@@ -20,10 +20,11 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, action: PayloadAction<Pedido>) => {
-      const p = state.pedido.find((pe) => pe.id === action.payload.id)
-      if (!p) {
-        state.pedido.push(action.payload)
-      } else {
+      const p = state.pedido.find((p) => p.id === action.payload.id)
+
+      state.pedido.push(action.payload)
+
+      if (p) {
         alert('Pedido já está no carrinho')
       }
     },
