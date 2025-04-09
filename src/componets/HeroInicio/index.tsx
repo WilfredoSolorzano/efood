@@ -1,15 +1,15 @@
-import { CategoriaPortada, PortadaContainer, PortadaPrato } from './styles'
+import { CategoryPorted, PortedContainer, PortedDish } from './styles'
 
 export type Props = {
   restaurant: Restaurant
 }
 const PortadaRestaurant = ({ restaurant }: Props) => (
-  <PortadaContainer style={{ backgroundImage: `url(${restaurant.capa})` }}>
+  <PortedContainer style={{ backgroundImage: `url(${restaurant.capa})` }}>
     <div className="container">
-      <CategoriaPortada>{restaurant.tipo}</CategoriaPortada>
-      <PortadaPrato>{restaurant.titulo}</PortadaPrato>
+      <CategoryPorted>{restaurant.tipo}</CategoryPorted>
+      <PortedDish>{restaurant.titulo}</PortedDish>
     </div>
-  </PortadaContainer>
+  </PortedContainer>
 )
 
 export default PortadaRestaurant

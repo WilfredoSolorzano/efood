@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styled'
+import { breakpoints, colors } from '../../styled'
 import { Link } from 'react-router-dom'
 
 export const Card = styled.div`
-  background-color: ${cores.fuccia};
-  color: ${cores.Claro};
+  background-color: ${colors.fuchsia};
+  color: ${colors.clear};
   max-width: 100%;
   width: 100%;
   display: flex;
@@ -36,8 +36,8 @@ export const Description = styled.p`
 `
 
 export const Button = styled(Link)`
-  background-color: ${cores.textBotoes};
-  color: ${cores.fuccia};
+  background-color: ${colors.pink};
+  color: ${colors.fuchsia};
   border: none;
   padding: 4px 7px;
 

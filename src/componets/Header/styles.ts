@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import fundo from '../../asset/images/Vector.png'
-import { breakpoints, cores } from '../../styled'
+import { breakpoints, colors } from '../../styled'
 
 export const HeaderStyle = styled.header`
   background-image: url(${fundo});
@@ -41,7 +41,7 @@ export const LinkRestaurantes = styled.a`
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  color: ${cores.fuccia};
+  color: ${colors.fuchsia};
   margin-top: 39px;
   @media (max-width: ${breakpoints.iphone11}) {
     margin-top: 0;
@@ -58,7 +58,7 @@ export const TextCart = styled.p`
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: ${cores.fuccia};
+  color: ${colors.fuchsia};
 
   img {
     width: 24px;

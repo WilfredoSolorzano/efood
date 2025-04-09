@@ -1,12 +1,12 @@
 import { SyncLoader } from 'react-spinners'
 import { Container } from './styles'
-import { cores } from '../../styled'
+import { colors } from '../../styled'
 
 const Loader = () => {
   return (
     <>
       <Container>
-        <SyncLoader color={cores.fuccia} />
+        <SyncLoader color={colors.fuchsia} />
       </Container>
     </>
   )

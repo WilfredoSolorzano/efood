@@ -12,6 +12,7 @@ import {
 import close from '../../asset/images/logos/close.jpg'
 import { useDispatch } from 'react-redux'
 import { addItem, open } from '../../store/reducers/cart'
+import { priceFormat } from '../../util'
 
 export type Props = {
   restaurant: Restaurant
@@ -22,13 +23,6 @@ export type Pedido = {
   nome: string
   foto: string
   preco: number
-}
-
-export const priceFormat = (price: number) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(price)
 }
 
 const PratosList = ({ restaurant }: Props) => {

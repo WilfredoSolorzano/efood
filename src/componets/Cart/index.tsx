@@ -9,18 +9,30 @@ import {
   InfosItem,
   DeleteItemButton,
   InfosCart,
-  CartStage
+  CartStage,
+  EmptyCartMessage
 } from './style'
 import { RootReducer } from '../../store'
-import { close, removeItem } from '../../store/reducers/cart'
-import { priceFormat } from '../PratosList'
+import { close, removeItem, startCheckout } from '../../store/reducers/cart'
+import { priceFormat } from '../../util'
+import Checkout from '../Checkout'
 
 const Cart = () => {
-  const { isOpen, pedido } = useSelector((state: RootReducer) => state.cart)
+  const { isOpen, pedido, isAddress, isCart } = useSelector(
+    (state: RootReducer) => state.cart
+  )
   const dispatch = useDispatch()
 
   const openCart = () => {
     dispatch(close())
+  }
+
+  const checkoutActive = () => {
+    if (getTotalPrice() > 0) {
+      dispatch(startCheckout())
+    } else {
+      alert('Não há itens no carrinho')
+    }
   }
 
   const getTotalPrice = () => {
@@ -42,33 +54,46 @@ const Cart = () => {
       <Overlay onClick={openCart} />
       <Sidebar>
         <CartStage>
-          <ul>
-            {pedido.map((p) => (
-              <ItemCart key={p.id}>
-                <ImageItem src={p.foto} alt="" />
-                <InfosItem>
-                  <h3>{p.nome}</h3>
-                  <span>{priceFormat(p.preco)}</span>
-                </InfosItem>
-                <DeleteItemButton
-                  type="button"
-                  onClick={() => itemRemovido(p.id)}
-                />
-              </ItemCart>
-            ))}
-          </ul>
-          <InfosCart>
-            <p>Valor total</p>
-            <span>{priceFormat(getTotalPrice())}</span>
-          </InfosCart>
-          <AddCartButton
-            onClick={() => alert('Função deshabilitada temporalmente')}
-          >
-            Continuar com a entrega
-          </AddCartButton>
+          {isCart ? (
+            <>
+              {pedido.length > 0 ? (
+                <>
+                  <ul>
+                    {pedido.map((p) => (
+                      <ItemCart key={p.id}>
+                        <ImageItem src={p.foto} alt="" />
+                        <InfosItem>
+                          <h3>{p.nome}</h3>
+                          <span>{priceFormat(p.preco)}</span>
+                        </InfosItem>
+                        <DeleteItemButton
+                          type="button"
+                          onClick={() => itemRemovido(p.id)}
+                        />
+                      </ItemCart>
+                    ))}
+                  </ul>
+                  <InfosCart>
+                    <p>Valor total</p>
+                    <span>{priceFormat(getTotalPrice())}</span>
+                  </InfosCart>
+                  <AddCartButton onClick={checkoutActive}>
+                    Continuar com a entrega
+                  </AddCartButton>
+                </>
+              ) : (
+                <EmptyCartMessage>
+                  Não há itens no carrinho ainda
+                </EmptyCartMessage>
+              )}
+            </>
+          ) : (
+            <Checkout checkoutStart={isAddress} priceTotal={getTotalPrice()} />
+          )}
         </CartStage>
       </Sidebar>
     </CartContainer>
   )
 }
+
 export default Cart

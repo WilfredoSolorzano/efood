@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import fundo from '../asset/images/Vector.png'
-import { cores } from '../styled'
+import { colors } from '../styled'
 
 export const Container = styled.footer`
   background-image: url(${fundo});
@@ -56,6 +56,6 @@ export const FooterText = styled.div`
   margin-top: 32px;
 
   p {
-    color: ${cores.fuccia};
+    color: ${colors.fuchsia};
   }
 `

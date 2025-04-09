@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styled'
+import { breakpoints, colors } from '../../styled'
 
 export const Container = styled.div`
   max-width: 1024px;
@@ -60,7 +60,7 @@ export const ModalContent = styled.div`
   margin: 0 auto;
   max-width: 1024px;
   height: 344px;
-  background-color: ${cores.fuccia};
+  background-color: ${colors.fuchsia};
   display: flex;
   flex-direction: row;
   position: relative;
@@ -90,14 +90,14 @@ export const ModalContainer = styled.div`
 export const PratosTitle = styled.h3`
   font-size: 18px;
   font-weight: 900;
-  color: ${cores.branca};
+  color: ${colors.white};
   line-height: 21.09px;
   display: block;
 `
 export const PratosDescription = styled.p`
   font-size: 14px;
   font-weight: 400;
-  color: ${cores.branca};
+  color: ${colors.white};
   line-height: 22px;
   width: 100%;
   margin: 16px 0 16px 0;
@@ -113,8 +113,8 @@ export const CloseIcon = styled.img`
   cursor: pointer;
 `
 export const Button = styled.button`
-  background-color: ${cores.textBotoes};
-  color: ${cores.fuccia};
+  background-color: ${colors.pink};
+  color: ${colors.fuchsia};
   border: none;
   padding: 4px 7px;
   font-weight: 700;

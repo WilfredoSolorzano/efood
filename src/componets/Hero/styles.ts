@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styled'
+import { breakpoints, colors } from '../../styled'
 import vector from '../../asset/images/Vector.png'
 
 export const HeroContainer = styled.div`
@@ -49,7 +49,7 @@ export const Text = styled.h1`
   font-weight: 900;
   line-height: 42.19px;
   text-align: center;
-  color: ${cores.fuccia};
+  color: ${colors.fuchsia};
   text-decoration: none;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;

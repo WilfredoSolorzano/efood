@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styled'
+import { breakpoints, colors } from '../../styled'
 import removeIcon from '../../asset/images/logos/lixeira.png'
 
 export const Overlay = styled.div`
@@ -28,8 +28,8 @@ export const CartContainer = styled.div`
 `
 
 export const AddCartButton = styled.a`
-  background-color: ${cores.textBotoes};
-  color: ${cores.fuccia};
+  background-color: ${colors.pink};
+  color: ${colors.fuchsia};
   border: none;
   padding: 4px;
   font-weight: 700;
@@ -42,8 +42,8 @@ export const AddCartButton = styled.a`
 `
 
 export const SubmitCartButton = styled.button`
-  background-color: ${cores.textBotoes};
-  color: ${cores.fuccia};
+  background-color: ${colors.pink};
+  color: ${colors.fuchsia};
   border: none;
   padding: 4px;
   font-weight: 700;
@@ -59,7 +59,7 @@ export const Sidebar = styled.aside`
   display: flex;
   overflow-y: scroll;
   flex-direction: column;
-  background-color: ${cores.fuccia};
+  background-color: ${colors.fuchsia};
   z-index: 1;
   padding: 32px 8px 8px 8px;
   max-width: 360px;
@@ -70,7 +70,7 @@ export const Sidebar = styled.aside`
   }
 `
 export const ItemCart = styled.li`
-  background-color: ${cores.textBotoes};
+  background-color: ${colors.pink};
   display: flex;
   padding: 8px;
   position: relative;
@@ -85,7 +85,7 @@ export const InfosItem = styled.div`
   margin-left: 8px;
   display: flex;
   flex-direction: column;
-  color: ${cores.fuccia};
+  color: ${colors.fuchsia};
   h3 {
     font-weight: 900;
     font-size: 18px;
@@ -112,7 +112,7 @@ export const InfosCart = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 40px 0 16px 0;
-  color: ${cores.Claro};
+  color: ${colors.clear};
   weight: 700;
   font-size: 14px;
 `
@@ -121,4 +121,11 @@ export const CartStage = styled.div`
   &.is-checkout {
     display: none;
   }
+`
+export const EmptyCartMessage = styled.p`
+  color: ${colors.pink};
+  text-align: center;
+  font-size: 22px;
+  line-height: 22px;
+  margin-top: 40px;
 `

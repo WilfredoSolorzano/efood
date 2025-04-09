@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { cores } from '../../styled'
+import { colors } from '../../styled'
 
 export const Card = styled.div`
-  background-color: ${cores.branca};
-  border: solid 1px ${cores.fuccia};
-  color: ${cores.fuccia};
+  background-color: ${colors.white};
+  border: solid 1px ${colors.fuchsia};
+  color: ${colors.fuchsia};
 
   .ContainerTop {
     display: flex;

@@ -1,14 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const cores = {
-  branca: '#FFFFFF',
-  preta: '#111',
-  fuccia: '#E66767',
-  textBotoes: '#FFEBD9',
-  dourado: '#FFB930',
-  colorBody: 'rgb(230, 103, 103)',
-  colorFundo: 'bisque',
-  Claro: '#FFF8F2'
+export const colors = {
+  white: '#FFFFFF',
+  black: '#111',
+  fuchsia: '#E66767',
+  pink: '#FFEBD9',
+  golden: '#FFB930',
+  roseLaor: 'rgb(230, 103, 103)',
+  bisque: 'bisque',
+  clear: '#FFF8F2',
+  gray: '#666'
 }
 export const breakpoints = {
   desktop: '1024px',
@@ -27,12 +28,11 @@ export const GlobalCss = createGlobalStyle`
     body {
     font-family: 'Roboto',sans-serif;
     line-height: 1.5;
-    background-color: ${cores.branca};
-    color: ${cores.preta};
+    background-color: ${colors.white};
+    color: ${colors.black};
 
     h2{
-    color: ${cores.fuccia};
-    margin: 25px 0;
+        margin: 25px 0;
     }
     @media (max-width: 768px) {
     padding: 12px;

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { breakpoints, cores } from '../../styled'
+import { breakpoints, colors } from '../../styled'
 
-export const PortadaContainer = styled.div`
+export const PortedContainer = styled.div`
   @media (max-width: ${breakpoints.mobile}) {
     height: 100%;
   }
@@ -30,14 +30,14 @@ export const PortadaContainer = styled.div`
     content: '';
   }
 `
-export const CategoriaPortada = styled.p`
-  color: ${cores.branca};
+export const CategoryPorted = styled.p`
+  color: ${colors.white};
   font-size: 32px;
   font-weight: 100;
   padding-top: 25px;
 `
-export const PortadaPrato = styled.p`
-  color: ${cores.branca};
+export const PortedDish = styled.p`
+  color: ${colors.white};
   font-size: 32px;
   font-weight: 900;
   padding-top: 156.5px;

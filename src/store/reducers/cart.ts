@@ -6,12 +6,18 @@ type CartState = {
   pedido: Pedido[]
   isOpen: boolean
   isCart: boolean
+  isAddress: boolean
+  isPayment: boolean
+  isConfirmed: boolean
 }
 
 const initialState: CartState = {
   items: [],
   isOpen: false,
   isCart: true,
+  isAddress: false,
+  isPayment: false,
+  isConfirmed: false,
   pedido: []
 }
 
@@ -39,11 +45,48 @@ const cartSlice = createSlice({
     },
     closeAndFinish: (state) => {
       state.isOpen = false
+      state.isCart = true
+      state.isConfirmed = false
+      state.isAddress = false
+      state.isPayment = false
       state.pedido = []
+    },
+    startCheckout: (state) => {
+      state.isCart = false
+      state.isConfirmed = false
+      state.isAddress = true
+      state.isPayment = false
+    },
+    payment: (state) => {
+      state.isConfirmed = false
+      state.isAddress = false
+      state.isPayment = true
+      state.isCart = false
+    },
+    confirmed: (state) => {
+      state.isConfirmed = true
+      state.isAddress = false
+      state.isPayment = false
+      state.isCart = false
+    },
+    backtoCart: (state) => {
+      state.isAddress = false
+      state.isPayment = false
+      state.isConfirmed = false
+      state.isCart = true
     }
   }
 })
 
-export const { open, close, addItem, removeItem, closeAndFinish } =
-  cartSlice.actions
+export const {
+  open,
+  close,
+  addItem,
+  removeItem,
+  closeAndFinish,
+  startCheckout,
+  payment,
+  confirmed,
+  backtoCart
+} = cartSlice.actions
 export default cartSlice.reducer
