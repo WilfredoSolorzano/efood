@@ -3,6 +3,7 @@ import { GlobalCss } from './styled'
 import Rotas from './routes'
 import { Provider } from 'react-redux'
 import { store } from './store'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter>
         <GlobalCss />
         <Rotas />
+        <SpeedInsights />
       </BrowserRouter>
     </Provider>
   )
